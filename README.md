@@ -1,3 +1,5 @@
+Check out the live website for this project here 👉 https://weather-insight-ml.netlify.app/
+
 This project performs climate pattern analysis using Python by visualizing yearly temperature, rainfall, and humidity trends from the year 2000 to 2024. The dataset contains 25 years of environmental observations, and the program generates four graphical outputs that help understand historical patterns and future predictions.
 
 The program begins by constructing a pandas DataFrame from predefined climate data and automatically handles missing values using mean substitution to ensure dataset consistency. It then trains a Linear Regression model to learn the temperature trend over the years and generates predicted temperature values which are later compared against the original dataset.
