@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Climate Prediction & Trend Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">Climate Prediction & Trend Analysis</h1>
+    <p class="subtitle">Insights on Temperature • Rainfall • Humidity & Forecasting using ML</p>
+
+    <section class="glass-card">
+        <h2 class="section-heading">Climate Visualizations</h2>
+
+        <div class="chart-buttons">
+            <button onclick="showChart(1)">Temperature</button>
+            <button onclick="showChart(2)">Rainfall</button>
+            <button onclick="showChart(3)">Humidity vs Temp</button>
+            <button onclick="showChart(4)">Prediction</button>
+        </div>
+
+        <div class="chart-box" id="chart1"><canvas id="tempChart"></canvas></div>
+        <div class="chart-box" id="chart2"><canvas id="rainfallChart"></canvas></div>
+        <div class="chart-box" id="chart3"><canvas id="humidityTempChart"></canvas></div>
+        <div class="chart-box" id="chart4"><canvas id="predictionChart"></canvas></div>
+    </section>
+
+    <section class="glass-card">
+        <h2 class="section-heading">Model Evaluation</h2>
+        <div class="metrics">
+            <p id="mse"></p>
+            <p id="rmse"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>🌍 Climate Analytics • Machine Learning Powered Visualization</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+function showChart(num) {
+    document.getElementById("chart1").style.display = "none";
+    document.getElementById("chart2").style.display = "none";
+    document.getElementById("chart3").style.display = "none";
+    document.getElementById("chart4").style.display = "none";
+    document.getElementById("chart" + num).style.display = "block";
+}
+showChart(1);
+</script>
+
+</body>
+</html>
